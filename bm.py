@@ -4,15 +4,17 @@
 """
     Author:cleverdeng
     E-mail:clverdeng@gmail.com
-    About BM(Boyer-Moore)算法
+    About BM(Boyer-Moore)
     http://zh.wikipedia.org/wiki/Boyer-Moore%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95
+    About Boyer-Moore Horspool
+    http://en.wikipedia.org/wiki/Boyer%E2%80%93Moore%E2%80%93Horspool_algorithm
 """
 
 __version__ = "0.1"
 __all__ = ["BoyerMoore"]
 
 
-class BoyerMoore(object):
+class BoyerMooreHorspool(object):
     def __init__(self, text, search):
         self.source = text
         self.search = search
@@ -54,5 +56,5 @@ if __name__ == "__main__":
     #Test
     source = "tstqtttheresrkafjksdkf"
     search = "tt"
-    bm = BoyerMoore(source, search)
+    bm = BoyerMooreHorspool(source, search)
     print bm.match()
